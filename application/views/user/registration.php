@@ -94,6 +94,7 @@
 				</div>
 			</div>
 
+			<!-- Gender, DOB  and Community -->
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">Gender</label>
 				<div class="form-group col-sm-2">
@@ -117,6 +118,8 @@
 				</div>
 			</div>
 
+
+			<!-- State, Place of birth and Nationality-->
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">State</label>
 				<div class="form-group col-sm-2">
@@ -135,6 +138,30 @@
 				</div>
 			</div>
 
+			<!-- PWD, PWD Caategory and PWD% -->
+			<div class="form-row">
+				<label class="col-form-label col-form-label-sm col-sm-2">Are You Physically Challenged?</label>
+				<div class="form-group col-sm-2">
+					<select class="form-control form-control-sm">
+						<option>Assam</option>
+						<option>Arunachal Pradesh</option>
+					</select>
+				</div>
+				<label class="col-form-label col-form-label-sm col-sm-2">Physically Challenged Category</label> 
+				<div class="form-group col-sm-2">
+					<select class="form-control form-control-sm">
+						<option>Assam</option>
+						<option>Arunachal Pradesh</option>
+					</select>
+				</div>
+				<label class="col-from-label col-form-label-sm col-sm-2">Percentage</label>
+				<div class="form-group col-sm-2">
+					<select class="form-control form-control-sm">
+						<option>Assam</option>
+						<option>Arunachal Pradesh</option>
+					</select>
+				</div>
+			</div>
 
 		</form>
 	</div>
