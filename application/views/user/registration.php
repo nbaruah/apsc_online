@@ -14,7 +14,7 @@
 
 	<nav
 		class="navbar navbar-dark navbar-expand-md bg-primary justify-content-center">
-		<a href="/" class="navbar-brand mr-0">Assam Pblic Service Commission</a>
+		<a href="/" class="navbar-brand mr-0">Assam Public Service Commission</a>
 		<button class="navbar-toggler ml-1" type="button"
 			data-toggle="collapse" data-target="#collapsingNavbar2">
 			<span class="navbar-toggler-icon"></span>
@@ -36,7 +36,11 @@
 		</div>
 	</nav>
 
-	<div class="container" style="box-shadow: 0 0 0 2px black;">
+	<div class="container">
+	<div class="card border-primary mb-3" style="margin-top: 5px;">
+  		<div class="card-header bg-secondary"><center><b>Registration</b></center></div>
+  		<div class="card-body">
+		
 		<form action="#">
 			<!-- Candidate's Name -->
 			<div class="form-row">
@@ -162,8 +166,46 @@
 					</select>
 				</div>
 			</div>
+			
+			<!-- Mobile Number and Email address -->
+			<div class="form-row">
+				<label class="col-form-label col-form-label-sm col-sm-2">Mobile number</label>
+				<div class="form-group col-sm-2">
+					<input type="number" class="form-control form-control-sm" name="mobile" placeholder="Mobile Number" min="10" max="10">
+				</div>
+				<label class="col-form-label col-form-label-sm col-sm-2">E-mail Address</label> 
+				<div class="form-group col-sm-2">
+					<input type="email" class="form-control form-control-sm" name="email" placeholder="E-mail Address">
+				</div>
+				<label class="col-from-label col-form-label-sm col-sm-2">Confirm E-mail Address</label>
+				<div class="form-group col-sm-2">
+					<input type="email" class="form-control form-control-sm" name="re_email" placeholder="Confirm E-mail">
+				</div>
+			</div>
+			
+			<!-- Password and Captcha -->
+			<div class="form-row">
+				<label class="col-form-label col-form-label-sm col-sm-2">Desired Password</label>
+				<div class="form-group col-sm-2">
+					<input type="password" class="form-control form-control-sm" name="mobile" placeholder="Password">
+				</div>
+				<label class="col-form-label col-form-label-sm col-sm-2">Confirm Password</label> 
+				<div class="form-group col-sm-2">
+					<input type="password" class="form-control form-control-sm" name="email" placeholder="Confirm Password">
+				</div>
+				<label class="col-from-label col-form-label-sm col-sm-2">Confirm Random Image</label>
+				<div class="form-group col-sm-2">
+					<input type="email" class="form-control form-control-sm" name="re_email" placeholder="Confirm E-mail">
+				</div>
+			</div>
 
+			<center>
+				<button type="submit" class="btn btn-success btn-sm">Submit</button>
+				<button type="reset" class="btn btn-danger btn-sm">Reset</button>
+			</center> 
 		</form>
+	</div>
+</div>
 	</div>
 
 </body>
