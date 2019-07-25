@@ -1,9 +1,14 @@
 <?php 
 
+/**
+ * @author Nayan
+ *
+ *	This class is represents all the name attributes
+ */
 class Reg_frm_names {
     const C_FNAME = 'c_fname';
     const C_MNAME = 'c_mname';
-    const C_LNAME = 'c_lname';
+    const C_LNAME = 'c_lnameyyyyyyyyyyyyy';
     const F_FNAME = 'f_fname';
     const F_MNAME = 'f_mname';
     const F_LNAME = 'f_lname';
@@ -27,10 +32,45 @@ class Reg_frm_names {
     const CAPTCHA = 'captcha';
     
     
-    public function c_fname()
+    public function get_c_fname()
     {
         return self::C_FNAME;
     }
+    
+    public function get_c_mname(){
+    	return self::C_MNAME;
+    }
+    
+    public function get_c_lname(){
+    	return self::C_LNAME;
+    }
+    
+    public function get_f_fname()
+    {
+    	return self::F_FNAME;
+    }
+    
+    public function get_f_mname(){
+    	return self::F_MNAME;
+    }
+    
+    public function get_f_lname(){
+    	return self::F_LNAME;
+    }
+    
+    public function get_m_fname()
+    {
+    	return self::M_FNAME;
+    }
+    
+    public function get_m_mname(){
+    	return self::M_MNAME;
+    }
+    
+    public function get_m_lname(){
+    	return self::M_LNAME;
+    }
+    
 }
 
 ?>
