@@ -8,7 +8,7 @@
 class Reg_frm_names {
     const C_FNAME = 'c_fname';
     const C_MNAME = 'c_mname';
-    const C_LNAME = 'c_lnameyyyyyyyyyyyyy';
+    const C_LNAME = 'c_lname';
     const F_FNAME = 'f_fname';
     const F_MNAME = 'f_mname';
     const F_LNAME = 'f_lname';
@@ -32,45 +32,104 @@ class Reg_frm_names {
     const CAPTCHA = 'captcha';
     
     
-    public function get_c_fname()
+    public function c_fname()
     {
         return self::C_FNAME;
     }
     
-    public function get_c_mname(){
+    public function c_mname(){
     	return self::C_MNAME;
     }
     
-    public function get_c_lname(){
+    public function c_lname(){
     	return self::C_LNAME;
     }
     
-    public function get_f_fname()
+    public function f_fname()
     {
     	return self::F_FNAME;
     }
     
-    public function get_f_mname(){
+    public function f_mname(){
     	return self::F_MNAME;
     }
     
-    public function get_f_lname(){
+    public function f_lname(){
     	return self::F_LNAME;
     }
     
-    public function get_m_fname()
+    public function m_fname()
     {
     	return self::M_FNAME;
     }
     
-    public function get_m_mname(){
+    public function m_mname(){
     	return self::M_MNAME;
     }
     
-    public function get_m_lname(){
+    public function m_lname(){
     	return self::M_LNAME;
     }
     
+    public function gender(){
+        return self::GENDER;
+    }
+    
+    public function dob(){
+        return self::DOB;
+    }
+    
+    public function comm(){
+        return self::COMM;
+    }
+    
+    public function state(){
+        return self::STATE;
+    }
+    
+    public function pob(){
+        return self::BIRTH;
+    }
+    
+    public function nation(){
+        return self::NATION;
+    }
+    
+    public function pwd(){
+        return self::PWD;
+    }
+    
+    public function pwd_cat(){
+        return self::PWD_CAT;
+    }
+    
+    public function pwd_per(){
+        return self::PWD_PER;
+    }
+    
+    public function mobile(){
+        return self::MOBILE;
+    }
+    
+    public function email(){
+        return self::EMAIL;
+    }
+    
+    public function re_email(){
+        return self::RE_EMAIL;
+    }
+    
+    public function password(){
+        return self::PASS;
+    }
+    
+    public function re_password(){
+        return self::RE_PASS;
+    }
+    
+    public function captcha(){
+        return self::CAPTCHA;
+    }
 }
 
 ?>
