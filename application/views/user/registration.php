@@ -41,22 +41,23 @@
   		<div class="card-header bg-success"><center style="color:#fff;"><b>Registration</b></center></div>
   		<div class="card-body">
 		
-		<form action="#">
+		<!-- <form action="#"> -->
+		<?= form_open('user/register'); ?>
 			<!-- Candidate's Name -->
 			<div class="form-row">
 				<label class="col-sm-2 col-form-label col-form-label-sm">Candidate's
 					Name</label>
 				<div class="form-group col-sm-4">
 					<input type="text" class="form-control form-control-sm"
-						name="<?php echo $this->reg_frm->get_c_fname(); ?>" placeholder="First Name">
+						name="<?php echo $this->reg_frm->c_fname(); ?>" placeholder="First Name">
 				</div>
 				<div class="form-group col-sm-3">
 					<input type="text" class="form-control form-control-sm"
-						name="<?php echo $this->reg_frm->get_c_mname(); ?>" placeholder="Middle Name">
+						name="<?php echo $this->reg_frm->c_mname(); ?>" placeholder="Middle Name">
 				</div>
 				<div class="form-group col-sm-3">
 					<input type="text" class="form-control form-control-sm"
-						name="<?php echo $this->reg_frm->get_c_lname(); ?>" placeholder="Last Name">
+						name="<?php echo $this->reg_frm->c_lname(); ?>" placeholder="Last Name">
 				</div>
 			</div>
 
@@ -66,15 +67,15 @@
 					Name</label>
 				<div class="form-group col-sm-4">
 					<input type="text" class="form-control form-control-sm"
-						name="f_fname" placeholder="First Name">
+						name="<?php echo $this->reg_frm->f_fname(); ?>" placeholder="First Name">
 				</div>
 				<div class="form-group col-sm-3">
 					<input type="text" class="form-control form-control-sm"
-						name="f_mname" placeholder="Middle Name">
+						name="<?php echo $this->reg_frm->f_mname(); ?>" placeholder="Middle Name">
 				</div>
 				<div class="form-group col-sm-3">
 					<input type="text" class="form-control form-control-sm"
-						name="f_lname" placeholder="Last Name">
+						name="<?php echo $this->reg_frm->f_lname(); ?>" placeholder="Last Name">
 				</div>
 			</div>
 
@@ -86,15 +87,15 @@
 				</label>
 				<div class="form-group col-sm-4">
 					<input type="text" class="form-control form-control-sm"
-						name="m_fname" placeholder="First Name">
+						name="<?php echo $this->reg_frm->m_fname(); ?>" placeholder="First Name">
 				</div>
 				<div class="form-group col-sm-3">
 					<input type="text" class="form-control form-control-sm"
-						name="m_mname" placeholder="Middle Name">
+						name="<?php echo $this->reg_frm->m_mname(); ?>" placeholder="Middle Name">
 				</div>
 				<div class="form-group col-sm-3">
 					<input type="text" class="form-control form-control-sm"
-						name="m_lname" placeholder="Last Name">
+						name="<?php echo $this->reg_frm->m_lname(); ?>" placeholder="Last Name">
 				</div>
 			</div>
 
@@ -102,7 +103,7 @@
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">Gender</label>
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm">
+					<select class="form-control form-control-sm" name="<?php echo $this->reg_frm->gender(); ?>">
 						<option>Small select</option>
 					</select>
 				</div>
@@ -110,13 +111,13 @@
 				<label class="col-form-label col-form-label-sm col-sm-2"> Date of
 					Birth</label>
 				<div class="form-group col-sm-2">
-					<input class="form-control form-control-sm" type="text" name="dob"
+					<input type="text" class="form-control form-control-sm" name="<?php echo $this->reg_frm->dob(); ?>"
 						placeholder="Date of Birth">
 				</div>
 
 				<label class="col-form-label col-form-label-sm col-sm-2">Community</label>
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm">
+					<select class="form-control form-control-sm" name="<?php echo $this->reg_frm->comm(); ?>">
 						<option>Small select</option>
 					</select>
 				</div>
@@ -127,18 +128,18 @@
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">State</label>
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm">
+					<select class="form-control form-control-sm" name="<?php echo $this->reg_frm->state(); ?>">
 						<option>Assam</option>
 						<option>Arunachal Pradesh</option>
 					</select>
 				</div>
 				<label class="col-form-label col-form-label-sm col-sm-2">Place of Birth</label> 
 				<div class="form-group col-sm-2">
-					<input type="text" class="form-control form-control-sm" name="pob" placeholder="place of birth">
+					<input type="text" class="form-control form-control-sm" name="<?php echo $this->reg_frm->pob(); ?>" placeholder="place of birth">
 				</div>
 				<label class="col-from-label col-form-label-sm col-sm-2">Nationality</label>
 				<div class="form-group col-sm-2">
-					<input type="text" class="form-control form-control-sm" name="nation" placeholder="Nationality">
+					<input type="text" class="form-control form-control-sm" name="<?php echo $this->reg_frm->nation(); ?>" placeholder="Nationality">
 				</div>
 			</div>
 
@@ -146,21 +147,21 @@
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">Are You Physically Challenged?</label>
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm">
+					<select class="form-control form-control-sm" name="<?php echo $this->reg_frm->pwd(); ?>">
 						<option>Assam</option>
 						<option>Arunachal Pradesh</option>
 					</select>
 				</div>
 				<label class="col-form-label col-form-label-sm col-sm-2">Physically Challenged Category</label> 
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm">
+					<select class="form-control form-control-sm" name="<?php echo $this->reg_frm->pwd_cat(); ?>">
 						<option>Assam</option>
 						<option>Arunachal Pradesh</option>
 					</select>
 				</div>
 				<label class="col-from-label col-form-label-sm col-sm-2">Percentage</label>
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm">
+					<select class="form-control form-control-sm" name="<?php echo $this->reg_frm->pwd_per(); ?>">
 						<option>Assam</option>
 						<option>Arunachal Pradesh</option>
 					</select>
@@ -171,15 +172,15 @@
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">Mobile number</label>
 				<div class="form-group col-sm-2">
-					<input type="number" class="form-control form-control-sm" name="mobile" placeholder="Mobile Number" min="10" max="10">
+					<input type="number" class="form-control form-control-sm" name="<?php echo $this->reg_frm->mobile(); ?>" placeholder="Mobile Number" min="10" max="10">
 				</div>
 				<label class="col-form-label col-form-label-sm col-sm-2">E-mail Address</label> 
 				<div class="form-group col-sm-2">
-					<input type="email" class="form-control form-control-sm" name="email" placeholder="E-mail Address">
+					<input type="email" class="form-control form-control-sm" name="<?php echo $this->reg_frm->email(); ?>" placeholder="E-mail Address">
 				</div>
 				<label class="col-from-label col-form-label-sm col-sm-2">Confirm E-mail Address</label>
 				<div class="form-group col-sm-2">
-					<input type="email" class="form-control form-control-sm" name="re_email" placeholder="Confirm E-mail">
+					<input type="email" class="form-control form-control-sm" name="<?php echo $this->reg_frm->re_email(); ?>" placeholder="Confirm E-mail">
 				</div>
 			</div>
 			
@@ -187,15 +188,15 @@
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">Desired Password</label>
 				<div class="form-group col-sm-2">
-					<input type="password" class="form-control form-control-sm" name="mobile" placeholder="Password">
+					<input type="password" class="form-control form-control-sm" name="<?php echo $this->reg_frm->password(); ?>" placeholder="Password">
 				</div>
 				<label class="col-form-label col-form-label-sm col-sm-2">Confirm Password</label> 
 				<div class="form-group col-sm-2">
-					<input type="password" class="form-control form-control-sm" name="email" placeholder="Confirm Password">
+					<input type="password" class="form-control form-control-sm" name="<?php echo $this->reg_frm->re_password(); ?>" placeholder="Confirm Password">
 				</div>
 				<label class="col-from-label col-form-label-sm col-sm-2">Confirm Random Image</label>
 				<div class="form-group col-sm-2">
-					<input type="email" class="form-control form-control-sm" name="re_email" placeholder="Confirm E-mail">
+					<input type="email" class="form-control form-control-sm" name="<?php echo $this->reg_frm->captcha(); ?>" placeholder="Confirm image">
 				</div>
 			</div>
 
