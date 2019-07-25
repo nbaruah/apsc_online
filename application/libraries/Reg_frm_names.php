@@ -10,6 +10,21 @@ class Reg_frm_names {
     const M_FNAME = 'm_fname';
     const M_MNAME = 'm_mname';
     const M_LNAME = 'm_lname';
+    const GENDER  = 'gender';
+    const DOB	= 'dob';
+    const COMM	= 'comm';
+    const STATE = 'state';
+    const BIRTH = 'birth';
+    const NATION = 'nation';
+    const PWD = 'pwd';
+    const PWD_CAT = 'pwd_cat';
+    const PWD_PER = 'pwd_per';
+    const MOBILE = 'mobile_no';
+    const EMAIL = 'email';
+    const RE_EMAIL = 're_email';
+    const PASS	= 'password';
+    const RE_PASS = 're_pass';
+    const CAPTCHA = 'captcha';
     
     
     public function c_fname()
