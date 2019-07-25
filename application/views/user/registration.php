@@ -38,7 +38,7 @@
 
 	<div class="container">
 	<div class="card border-primary mb-3" style="margin-top: 5px;">
-  		<div class="card-header bg-secondary"><center><b>Registration</b></center></div>
+  		<div class="card-header bg-success"><center style="color:#fff;"><b>Registration</b></center></div>
   		<div class="card-body">
 		
 		<form action="#">
@@ -48,15 +48,15 @@
 					Name</label>
 				<div class="form-group col-sm-4">
 					<input type="text" class="form-control form-control-sm"
-						name="c_fname" placeholder="First Name">
+						name="<?php echo $this->reg_frm->get_c_fname(); ?>" placeholder="First Name">
 				</div>
 				<div class="form-group col-sm-3">
 					<input type="text" class="form-control form-control-sm"
-						name="c_mname" placeholder="Middle Name">
+						name="<?php echo $this->reg_frm->get_c_mname(); ?>" placeholder="Middle Name">
 				</div>
 				<div class="form-group col-sm-3">
 					<input type="text" class="form-control form-control-sm"
-						name="c_lname" placeholder="Last Name">
+						name="<?php echo $this->reg_frm->get_c_lname(); ?>" placeholder="Last Name">
 				</div>
 			</div>
 
