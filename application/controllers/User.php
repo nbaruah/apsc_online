@@ -1,7 +1,8 @@
 <?php
 class User extends CI_Controller
 {
-    
+    //TO-DO
+    //http://sab99r.com/blog/codeigniter-is-logged-in/
     
     
     public function index(){
@@ -12,7 +13,11 @@ class User extends CI_Controller
     }
     
     public function register(){
-       echo 'welcome';
+        $this->load->model('candidates');
+        //echo '<pre>';
+        $types = $this->candidates->get_gender_types();
+        header('Content-Type:application/json');
+        echo json_encode($types);
     }
 }
 
