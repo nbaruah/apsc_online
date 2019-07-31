@@ -103,7 +103,7 @@
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">Gender</label>
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm" name="<?php echo $this->reg_frm->gender(); ?>">
+					<select id="gender" class="form-control form-control-sm" name="<?php echo $this->reg_frm->gender(); ?>">
 						<option>Small select</option>
 					</select>
 				</div>
@@ -210,6 +210,9 @@
 	</div>
 
 </body>
+
+<script type="text/javascript" src="<?= base_url('assets/js/vw_register.js'); ?>"></script>
+
 </html>
 
 

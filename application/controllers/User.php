@@ -12,9 +12,8 @@ class User extends CI_Controller
         $this->load->view("user/registration");
     }
     
-    public function register(){
+    public function get_data(){
         $this->load->model('candidates');
-        //echo '<pre>';
         $types = $this->candidates->get_gender_types();
         header('Content-Type:application/json');
         echo json_encode($types);
