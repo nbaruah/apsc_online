@@ -12,11 +12,21 @@ class User extends CI_Controller
         $this->load->view("user/registration");
     }
     
-    public function get_data(){
+    public function get_data($type){
         $this->load->model('candidates');
-        $types = $this->candidates->get_gender_types();
+        switch ($type) {
+            case 'gender':
+                $result = $this->candidates->get_gender_types();
+                break;
+            case 'state':
+                $result = $this->candidates->get_states();
+                break;
+            default:
+                break;
+        }
+
         header('Content-Type:application/json');
-        echo json_encode($types);
+        echo json_encode($result);
     }
 }
 

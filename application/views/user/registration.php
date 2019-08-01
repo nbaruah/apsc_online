@@ -8,6 +8,11 @@
 <!-- To ensure proper rendering and touch zooming in mobile devices, add the following <meta> tag inside the <head> element: -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <?php echo link_tag("assets/css/bootstrap.min.css"); ?>
+
+<script language="JavaScript" type="text/javascript" src="<?= base_url('assets/js/jquery-3.4.1.min.js'); ?>"></script>
+<script language="JavaScript" type="text/javascript" src="<?= base_url('assets/js/vw_register.js'); ?>"></script>
+<script language="JavaScript" type="text/javascript" src="<?= base_url('assets/js/bootstrap.min.js'); ?>"></script>
+
 </head>
 
 <body>
@@ -104,7 +109,6 @@
 				<label class="col-form-label col-form-label-sm col-sm-2">Gender</label>
 				<div class="form-group col-sm-2">
 					<select id="gender" class="form-control form-control-sm" name="<?php echo $this->reg_frm->gender(); ?>">
-						<option>Small select</option>
 					</select>
 				</div>
 
@@ -128,9 +132,7 @@
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">State</label>
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm" name="<?php echo $this->reg_frm->state(); ?>">
-						<option>Assam</option>
-						<option>Arunachal Pradesh</option>
+					<select id="states" class="form-control form-control-sm" name="<?php echo $this->reg_frm->state(); ?>">
 					</select>
 				</div>
 				<label class="col-form-label col-form-label-sm col-sm-2">Place of Birth</label> 
@@ -208,10 +210,7 @@
 	</div>
 </div>
 	</div>
-
 </body>
-
-<script type="text/javascript" src="<?= base_url('assets/js/vw_register.js'); ?>"></script>
 
 </html>
 
