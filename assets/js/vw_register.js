@@ -1,6 +1,7 @@
 $(function() {
 	//alert('Document is Ready!!');
 	load_gender_types();
+	load_states();
 });
 
 /*function load_gender_types(){
@@ -25,7 +26,7 @@ $(function() {
 
 function load_gender_types(){	
 	$.ajax({
-		url: "get_data/gender",
+		url: "user/get_data/gender",
 		dataType: "json",
 		type: "GET",
 		cache: false,
@@ -36,13 +37,31 @@ function load_gender_types(){
 			});
 		},
 		error: function(status, errorThrow) {
-			alert("Sorry!, some error occured Please try again");
+			$('.alert-danger').append('<center>'+ status.responseText +'</center>');
 			console.log(status.statusText);
 			console.log(errorThrow);
-			console.log(status);
+			console.log(status.responseText);
+		}
+	});
+}
+
+function load_states(){	
+	$.ajax({
+		url: "user/get_data/state",
+		dataType: "json",
+		type: "GET",
+		cache: false,
+		success: function(data) {
+				var state_id = $('#states');
+				$.each(data, function(i, item) {
+				state_id.append('<option>' + item.name + '</option>');
+			});
 		},
-		beforeSend: function(){
-            $('#gender').html('<center><i class="fa fa-refresh fa-spin fa-2x"></i></center>').fadeIn(100);
-        }
+		error: function(status, errorThrow) {
+			$('.alert-danger').append('<center>'+ status.responseText +'</center>');
+			console.log(status.statusText);
+			console.log(errorThrow);
+			console.log(status.responseText);
+		}
 	});
 }

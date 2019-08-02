@@ -22,6 +22,7 @@ class User extends CI_Controller
                 $result = $this->candidates->get_states();
                 break;
             default:
+                //$result = array("stat_code" => 404, "err_msg" => "The page you are looking for not found");
                 break;
         }
 
