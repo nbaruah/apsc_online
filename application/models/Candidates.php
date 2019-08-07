@@ -15,4 +15,9 @@ class Candidates extends CI_Model {
     	return $this->db->query("SELECT `id`, `name` FROM states")->result();
     }
 
+    public function get_categories()
+    {
+        return $this->db->query("SELECT `id`, `cat_type` FROM category")->result();
+    }
+
 }

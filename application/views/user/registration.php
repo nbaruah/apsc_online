@@ -119,10 +119,9 @@
 						placeholder="Date of Birth">
 				</div>
 
-				<label class="col-form-label col-form-label-sm col-sm-2">Community</label>
+				<label class="col-form-label col-form-label-sm col-sm-2">Category</label>
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm" name="<?php echo $this->reg_frm->comm(); ?>">
-						<option>Small select</option>
+					<select id="category" class="form-control form-control-sm" name="<?php echo $this->reg_frm->comm(); ?>">
 					</select>
 				</div>
 			</div>
@@ -149,23 +148,19 @@
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">Are You Physically Challenged?</label>
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm" name="<?php echo $this->reg_frm->pwd(); ?>">
-						<option>Assam</option>
-						<option>Arunachal Pradesh</option>
+					<select id="pwd_status" class="form-control form-control-sm" name="<?php echo $this->reg_frm->pwd(); ?>">
+						<option selected>No</option>
+						<option>Yes</option>
 					</select>
 				</div>
 				<label class="col-form-label col-form-label-sm col-sm-2">Physically Challenged Category</label> 
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm" name="<?php echo $this->reg_frm->pwd_cat(); ?>">
-						<option>Assam</option>
-						<option>Arunachal Pradesh</option>
+					<select class="form-control form-control-sm pwd" name="<?php echo $this->reg_frm->pwd_cat(); ?>">
 					</select>
 				</div>
 				<label class="col-from-label col-form-label-sm col-sm-2">Percentage</label>
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm" name="<?php echo $this->reg_frm->pwd_per(); ?>">
-						<option>Assam</option>
-						<option>Arunachal Pradesh</option>
+					<select class="form-control form-control-sm pwd" name="<?php echo $this->reg_frm->pwd_per(); ?>">
 					</select>
 				</div>
 			</div>
@@ -211,11 +206,7 @@
 </div>
 
 
-<div class="alert alert-dismissible alert-danger">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
 </div>
-
-	</div>
 </body>
 
 </html>

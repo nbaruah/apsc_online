@@ -15,11 +15,14 @@ class User extends CI_Controller
     public function get_data($type){
         $this->load->model('candidates');
         switch ($type) {
-            case 'gender':
+            case 'genders':
                 $result = $this->candidates->get_gender_types();
                 break;
-            case 'state':
+            case 'states':
                 $result = $this->candidates->get_states();
+                break;
+            case 'categories':
+                $result = $this->candidates->get_categories();
                 break;
             default:
                 //$result = array("stat_code" => 404, "err_msg" => "The page you are looking for not found");
