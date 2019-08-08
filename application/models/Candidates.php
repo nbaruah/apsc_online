@@ -20,4 +20,8 @@ class Candidates extends CI_Model {
         return $this->db->query("SELECT `id`, `cat_type` FROM category")->result();
     }
 
+    public function get_pwd_types(){
+        return $this->db->query("SELECT `id`, `details` FROM `pwd_types`")->result();
+    }
+
 }

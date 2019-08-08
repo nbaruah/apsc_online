@@ -155,13 +155,12 @@
 				</div>
 				<label class="col-form-label col-form-label-sm col-sm-2">Physically Challenged Category</label> 
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm pwd" name="<?php echo $this->reg_frm->pwd_cat(); ?>">
+					<select id="pwd_cat" class="form-control form-control-sm pwd" name="<?php echo $this->reg_frm->pwd_cat(); ?>">
 					</select>
 				</div>
-				<label class="col-from-label col-form-label-sm col-sm-2">Percentage</label>
+				<label class="col-from-label col-form-label-sm col-sm-2">Mention Percentage</label>
 				<div class="form-group col-sm-2">
-					<select class="form-control form-control-sm pwd" name="<?php echo $this->reg_frm->pwd_per(); ?>">
-					</select>
+					<input type="text" class="form-control form-control-sm pwd" name="<?php echo $this->reg_frm->pwd_per(); ?>">
 				</div>
 			</div>
 			
