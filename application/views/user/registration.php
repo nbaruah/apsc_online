@@ -109,6 +109,7 @@
 				<label class="col-form-label col-form-label-sm col-sm-2">Gender</label>
 				<div class="form-group col-sm-2">
 					<select id="gender" class="form-control form-control-sm" name="<?php echo $this->reg_frm->gender(); ?>">
+						<option value="" selected>--SELECT--</option>
 					</select>
 				</div>
 
@@ -122,6 +123,7 @@
 				<label class="col-form-label col-form-label-sm col-sm-2">Category</label>
 				<div class="form-group col-sm-2">
 					<select id="category" class="form-control form-control-sm" name="<?php echo $this->reg_frm->comm(); ?>">
+						<option value="" selected>--SELECT--</option>
 					</select>
 				</div>
 			</div>
@@ -132,6 +134,7 @@
 				<label class="col-form-label col-form-label-sm col-sm-2">State</label>
 				<div class="form-group col-sm-2">
 					<select id="states" class="form-control form-control-sm" name="<?php echo $this->reg_frm->state(); ?>">
+						<option value="" selected>--SELECT--</option>
 					</select>
 				</div>
 				<label class="col-form-label col-form-label-sm col-sm-2">Place of Birth</label> 
@@ -156,11 +159,19 @@
 				<label class="col-form-label col-form-label-sm col-sm-2">Physically Challenged Category</label> 
 				<div class="form-group col-sm-2">
 					<select id="pwd_cat" class="form-control form-control-sm pwd" name="<?php echo $this->reg_frm->pwd_cat(); ?>">
+						<option value="" selected>--SELECT--</option>
 					</select>
 				</div>
 				<label class="col-from-label col-form-label-sm col-sm-2">Mention Percentage</label>
 				<div class="form-group col-sm-2">
-					<input type="text" class="form-control form-control-sm pwd" name="<?php echo $this->reg_frm->pwd_per(); ?>">
+					<select id="pwd_per" class="form-control form-control-sm pwd" name="<?php echo $this->reg_frm->pwd_per(); ?>">
+						<option value="" selected>--SELECT--</option>
+						<?php 
+							for ($i=1; $i <=100 ; $i++) {
+								echo '<option value="'. $i. '">' . $i . '% </option>';
+							} 
+						?>
+					</select>
 				</div>
 			</div>
 			
@@ -198,7 +209,7 @@
 
 			<center>
 				<button type="submit" class="btn btn-success btn-sm">Submit</button>
-				<button type="reset" class="btn btn-danger btn-sm">Reset</button>
+				<button id="reset" type="reset" class="btn btn-danger btn-sm">Reset</button>
 			</center> 
 		</form>
 	</div>

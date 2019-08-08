@@ -1,3 +1,4 @@
+//Start of document ready function
 $(function() {
 	//alert('Document is Ready!!');
 	load_gender_types();
@@ -5,12 +6,13 @@ $(function() {
 	load_categories();
 	$(handle_pwd);
 	$('#pwd_status').on('change', handle_pwd);
+	$('#reset').on('click', handle_pwd);
 	load_pwd_types();
 });
 
-var ajax_call = function(url){
-	$.ajax({
-		url: 'user/get_data/categories',
+function ajax_call(data_url){
+	return $.ajax({
+		url: data_url,
 		type: 'GET',
 		dataType: 'json',
 		cache: false
@@ -30,11 +32,7 @@ var ajax_complete_handler = function(XMLhttpReq, status){
 
 function load_gender_types(){
 	var gender_id = $('#gender');
-	$.ajax({
-		url: 'user/get_data/genders',
-		type: 'GET',
-		dataType: 'json',
-	})
+	ajax_call('user/get_data/genders')
 	.done(function(data) {
 		console.log("success");
 		$.each(data, function(index, val) {
@@ -67,11 +65,7 @@ function load_states(){
 function load_categories(){
 	var cat_id = $('#category');
 
-	$.ajax({
-		url: 'user/get_data/categories',
-		type: 'GET',
-		dataType: 'json'
-	})
+	ajax_call('user/get_data/categories')
 	.done(function(data) {
 		console.log("success");
 		$.each(data, function(index, val) {
@@ -88,6 +82,7 @@ function load_categories(){
 var handle_pwd = function(){
 	if ($('#pwd_status').val() == 'No') {
 		$('.pwd').prop('disabled', true);
+		$('.pwd').val('');
 	} 
 	else {
 		$('.pwd').prop('disabled', false);
@@ -96,11 +91,8 @@ var handle_pwd = function(){
 
 function load_pwd_types(){
 	var pwd_cat_id = $('#pwd_cat');
-	$.ajax({
-		url: 'user/get_data/pwd_types',
-		type: 'GET',
-		dataType: 'json',
-	})
+
+	ajax_call('user/get_data/pwd_types')
 	.done(function(data) {
 		console.log("success");
 		$.each(data, function(index, val) {

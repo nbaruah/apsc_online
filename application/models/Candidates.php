@@ -12,7 +12,7 @@ class Candidates extends CI_Model {
 
     public function get_states()
     {
-    	return $this->db->query("SELECT `id`, `name` FROM states")->result();
+    	return $this->db->query("SELECT `id`, `name` FROM states ORDER BY `name` ASC")->result();
     }
 
     public function get_categories()
