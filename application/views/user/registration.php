@@ -87,7 +87,7 @@
 			<!-- Mother's Name -->
 			<div class="form-row">
 				<label class="col-sm-2 col-form-label col-form-label-sm"> Mother's
-					Name <small class="text-success">(Please Do not use
+					Name <small class="form-text text-muted">(Please Do not use
 						Shri/Mr./Ms./Dr./Mrs. etc.)</small>
 				</label>
 				<div class="form-group col-sm-4">

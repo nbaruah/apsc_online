@@ -4,11 +4,16 @@ class User extends CI_Controller
     //TO-DO
     //http://sab99r.com/blog/codeigniter-is-logged-in/
     
+    public function __construct()
+    {
+        parent::__construct();
+        //Do your magic here
+        //Loaded this library to be used in the view for name attributes
+        $this->load->library('Reg_frm_names', NULL, 'reg_frm');
+        $this->load->helper('form');
+    }
     
     public function index(){
-    	//Loaded this library to be used in the view for name attributes
-    	$this->load->library('Reg_frm_names', NULL, 'reg_frm');
-    	$this->load->helper('form');
         $this->load->view("user/registration");
     }
     
@@ -35,6 +40,10 @@ class User extends CI_Controller
 
         header('Content-Type:application/json');
         echo json_encode($result);
+    }
+
+    public function register(){
+        echo $this->reg_frm->f_fname();
     }
 }
 
