@@ -49,82 +49,95 @@
 		<!-- <form action="#"> -->
 		<?= form_open('user/register'); ?>
 			<!-- Candidate's Name -->
+			<center><small class="small text-info font-italic">(Please Do not use Shri/Mr./Ms./Dr./Mrs. etc.)</small></center>
 			<div class="form-row">
-				<label class="col-sm-2 col-form-label col-form-label-sm">Candidate's
-					Name</label>
-				<div class="form-group col-sm-4">
+				<label class="col-sm-2 col-form-label col-form-label-sm">Candidate's Name 
+				</label>
+				<div class="form-group col-sm-4 mb-1">
 					<input type="text" class="form-control form-control-sm"
 						name="<?php echo $this->reg_frm->c_fname(); ?>" placeholder="First Name">
+					<?=form_error($this->reg_frm->c_fname())?>
 				</div>
-				<div class="form-group col-sm-3">
+				<div class="form-group col-sm-3 mb-1">
 					<input type="text" class="form-control form-control-sm"
 						name="<?php echo $this->reg_frm->c_mname(); ?>" placeholder="Middle Name">
+					<?=form_error($this->reg_frm->c_mname())?>
 				</div>
-				<div class="form-group col-sm-3">
+				<div class="form-group col-sm-3 mb-1">
 					<input type="text" class="form-control form-control-sm"
 						name="<?php echo $this->reg_frm->c_lname(); ?>" placeholder="Last Name">
+					<?=form_error($this->reg_frm->c_lname())?>
 				</div>
 			</div>
 
 			<!-- Father's Name -->
+			<center><small class="small text-info font-italic">(Please Do not use Shri/Mr./Ms./Dr./Mrs. etc.)</small></center>
 			<div class="form-row">
 				<label class="col-sm-2 col-form-label col-form-label-sm">Father's
 					Name</label>
-				<div class="form-group col-sm-4">
+				<div class="form-group col-sm-4 mb-1">
 					<input type="text" class="form-control form-control-sm"
 						name="<?php echo $this->reg_frm->f_fname(); ?>" placeholder="First Name">
+						<?=form_error($this->reg_frm->f_fname())?>
 				</div>
-				<div class="form-group col-sm-3">
+				<div class="form-group col-sm-3 mb-1">
 					<input type="text" class="form-control form-control-sm"
 						name="<?php echo $this->reg_frm->f_mname(); ?>" placeholder="Middle Name">
+						<?=form_error($this->reg_frm->f_mname())?>			
 				</div>
-				<div class="form-group col-sm-3">
+				<div class="form-group col-sm-3 mb-1">
 					<input type="text" class="form-control form-control-sm"
 						name="<?php echo $this->reg_frm->f_lname(); ?>" placeholder="Last Name">
+						<?=form_error($this->reg_frm->f_lname())?>
 				</div>
 			</div>
 
 			<!-- Mother's Name -->
+			<center><small class="small text-info font-italic">(Please Do not use Shri/Mr./Ms./Dr./Mrs. etc.)</small></center>
 			<div class="form-row">
-				<label class="col-sm-2 col-form-label col-form-label-sm"> Mother's
-					Name <small class="form-text text-muted">(Please Do not use
-						Shri/Mr./Ms./Dr./Mrs. etc.)</small>
+				<label class="col-sm-2 col-form-label col-form-label-sm"> Mother's Name
 				</label>
-				<div class="form-group col-sm-4">
+				<div class="form-group col-sm-4 mb-1">
 					<input type="text" class="form-control form-control-sm"
 						name="<?php echo $this->reg_frm->m_fname(); ?>" placeholder="First Name">
+						<?=form_error($this->reg_frm->m_fname())?>
 				</div>
-				<div class="form-group col-sm-3">
+				<div class="form-group col-sm-3 mb-1">
 					<input type="text" class="form-control form-control-sm"
 						name="<?php echo $this->reg_frm->m_mname(); ?>" placeholder="Middle Name">
+						<?=form_error($this->reg_frm->m_mname())?>
 				</div>
-				<div class="form-group col-sm-3">
+				<div class="form-group col-sm-3 mb-1">
 					<input type="text" class="form-control form-control-sm"
 						name="<?php echo $this->reg_frm->m_lname(); ?>" placeholder="Last Name">
+						<?=form_error($this->reg_frm->m_lname())?>
 				</div>
 			</div>
 
 			<!-- Gender, DOB  and Community -->
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">Gender</label>
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<select id="gender" class="form-control form-control-sm" name="<?php echo $this->reg_frm->gender(); ?>">
 						<option value="" selected>--SELECT--</option>
 					</select>
+					<?=form_error($this->reg_frm->gender())?>
 				</div>
 
 				<label class="col-form-label col-form-label-sm col-sm-2"> Date of
 					Birth</label>
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<input type="text" class="form-control form-control-sm" name="<?php echo $this->reg_frm->dob(); ?>"
 						placeholder="Date of Birth">
+						<?=form_error($this->reg_frm->dob())?>
 				</div>
 
 				<label class="col-form-label col-form-label-sm col-sm-2">Category</label>
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<select id="category" class="form-control form-control-sm" name="<?php echo $this->reg_frm->comm(); ?>">
 						<option value="" selected>--SELECT--</option>
 					</select>
+					<?=form_error($this->reg_frm->comm())?>
 				</div>
 			</div>
 
@@ -132,38 +145,43 @@
 			<!-- State, Place of birth and Nationality-->
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">State</label>
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<select id="states" class="form-control form-control-sm" name="<?php echo $this->reg_frm->state(); ?>">
 						<option value="" selected>--SELECT--</option>
 					</select>
+					<?=form_error($this->reg_frm->state())?>
 				</div>
 				<label class="col-form-label col-form-label-sm col-sm-2">Place of Birth</label> 
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<input type="text" class="form-control form-control-sm" name="<?php echo $this->reg_frm->pob(); ?>" placeholder="place of birth">
+					<?=form_error($this->reg_frm->pob())?>
 				</div>
 				<label class="col-from-label col-form-label-sm col-sm-2">Nationality</label>
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<input type="text" class="form-control form-control-sm" name="<?php echo $this->reg_frm->nation(); ?>" placeholder="Nationality">
+					<?=form_error($this->reg_frm->nation())?>
 				</div>
 			</div>
 
 			<!-- PWD, PWD Caategory and PWD% -->
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">Are You Physically Challenged?</label>
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<select id="pwd_status" class="form-control form-control-sm" name="<?php echo $this->reg_frm->pwd(); ?>">
 						<option selected>No</option>
 						<option>Yes</option>
 					</select>
+					<?=form_error($this->reg_frm->pwd())?>
 				</div>
 				<label class="col-form-label col-form-label-sm col-sm-2">Physically Challenged Category</label> 
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<select id="pwd_cat" class="form-control form-control-sm pwd" name="<?php echo $this->reg_frm->pwd_cat(); ?>">
 						<option value="" selected>--SELECT--</option>
 					</select>
+					<?=form_error($this->reg_frm->pwd_cat())?>
 				</div>
 				<label class="col-from-label col-form-label-sm col-sm-2">Mention Percentage</label>
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<select id="pwd_per" class="form-control form-control-sm pwd" name="<?php echo $this->reg_frm->pwd_per(); ?>">
 						<option value="" selected>--SELECT--</option>
 						<?php 
@@ -172,38 +190,45 @@
 							} 
 						?>
 					</select>
+					<?=form_error($this->reg_frm->pwd_per())?>
 				</div>
 			</div>
 			
 			<!-- Mobile Number and Email address -->
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">Mobile number</label>
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<input type="number" class="form-control form-control-sm" name="<?php echo $this->reg_frm->mobile(); ?>" placeholder="Mobile Number" min="10" max="10">
+					<?=form_error($this->reg_frm->mobile())?>
 				</div>
 				<label class="col-form-label col-form-label-sm col-sm-2">E-mail Address</label> 
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<input type="email" class="form-control form-control-sm" name="<?php echo $this->reg_frm->email(); ?>" placeholder="E-mail Address">
+					<?=form_error($this->reg_frm->email())?>
 				</div>
 				<label class="col-from-label col-form-label-sm col-sm-2">Confirm E-mail Address</label>
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<input type="email" class="form-control form-control-sm" name="<?php echo $this->reg_frm->re_email(); ?>" placeholder="Confirm E-mail">
+					<?=form_error($this->reg_frm->re_email())?>
 				</div>
 			</div>
 			
 			<!-- Password and Captcha -->
 			<div class="form-row">
 				<label class="col-form-label col-form-label-sm col-sm-2">Desired Password</label>
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<input type="password" class="form-control form-control-sm" name="<?php echo $this->reg_frm->password(); ?>" placeholder="Password">
+					<?=form_error($this->reg_frm->password())?>
 				</div>
 				<label class="col-form-label col-form-label-sm col-sm-2">Confirm Password</label> 
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<input type="password" class="form-control form-control-sm" name="<?php echo $this->reg_frm->re_password(); ?>" placeholder="Confirm Password">
+					<?=form_error($this->reg_frm->re_password())?>
 				</div>
 				<label class="col-from-label col-form-label-sm col-sm-2">Confirm Random Image</label>
-				<div class="form-group col-sm-2">
+				<div class="form-group col-sm-2 mb-1">
 					<input type="email" class="form-control form-control-sm" name="<?php echo $this->reg_frm->captcha(); ?>" placeholder="Confirm image">
+					<?=form_error($this->reg_frm->captcha())?>
 				</div>
 			</div>
 

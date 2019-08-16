@@ -6,6 +6,7 @@
  *	This class is represents all the name attributes
  */
 class Reg_frm_names {
+
     const C_FNAME = 'c_fname';
     const C_MNAME = 'c_mname';
     const C_LNAME = 'c_lname';
@@ -129,6 +130,133 @@ class Reg_frm_names {
     
     public function captcha(){
         return self::CAPTCHA;
+    }
+
+    public function get_fname_rules($field_name)
+    {
+        return array(
+            'field' => $field_name,
+            'label' => 'First Name',
+            'rules' => 'required|alpha_numeric_spaces|max_length[50]'
+        );
+    }
+
+    public function get_mname_rules($field_name)
+    {
+        return array(
+            'field' => $field_name,
+            'label' => 'Middle Name',
+            'rules' => 'alpha_numeric_spaces|max_length[50]'
+        );
+    }
+
+    public function get_lname_rules($field_name)
+    {
+        return array(
+            'field' => $field_name,
+            'label' => 'Last Name',
+            'rules' => 'required|alpha_numeric_spaces|max_length[50]'
+        );
+    }
+
+    public function get_gender_rules()
+    {
+        return array(
+            'field' => self::GENDER,
+            'label' => 'Gender',
+            'rules' => 'required|alpha'
+        );
+    }
+
+    public function get_dob_rules()
+    {
+        return array(
+            'field' => self::DOB,
+            'label' => 'Date of Birth',
+            'rules' => 'required|alpha_dash'
+        );
+    }
+
+    public function get_category_rules()
+    {
+        return array(
+            'field' => self::COMM,
+            'label' => 'Category',
+            'rules' => 'required|alpha'
+        );
+    }
+
+    public function get_state_rules()
+    {
+        return array(
+            'field' => self::STATE,
+            'label' => 'State',
+            'rules' => 'required|alpha'
+        );
+    }
+
+    public function get_pob_rules()
+    {
+        return array(
+            'field' => self::BIRTH,
+            'label' => 'Place of Birth',
+            'rules' => 'alpha_numeric_spaces'
+        );
+    }
+
+    public function get_nation_rules()
+    {
+        return array(
+            'field' => self::NATION,
+            'label' => 'Nationality',
+            'rules' => 'required|alpha'
+        );
+    }
+
+    public function get_mobile_rules()
+    {
+        return array(
+            'field' => self::MOBILE,
+            'label' => 'Mobile Number',
+            'rules' => 'required|numeric|max_length[10]'
+        );
+    }
+
+    public function get_email_rules()
+    {
+        //To-DO Isunique email
+        return array(
+            'field' => self::EMAIL,
+            'label' => 'e-mail ID',
+            'rules' => 'required|valid_email'
+        );
+    }
+
+    public function get_confirm_email_rules()
+    {
+        return array(
+            'field' => self::RE_EMAIL,
+            'label' => 'e-mail Confirmation',
+            'rules' => 'required|matches['. self::EMAIL .']'
+        );
+    }
+
+    public function get_password_rules()
+    {
+        return array(
+            'field' => self::PASS,
+            'label' => 'Password',
+            'rules' => 'required'
+        );
+    }
+
+    public function get_confirm_pass_rules()
+    {
+        return array(
+            'field' => self::RE_PASS,
+            'label' => 'Password Confirmation',
+            'rules' => 'required|matches['. self::PASS .']'
+        );
     }
 }
 
